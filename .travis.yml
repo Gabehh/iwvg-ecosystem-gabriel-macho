@@ -11,3 +11,5 @@ notifications:
 
 script:
   - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
+    #SONARCLOUD
+  - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=gabehh-github -Dsonar.login=$SONAR
