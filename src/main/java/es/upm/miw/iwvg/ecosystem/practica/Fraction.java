@@ -34,4 +34,9 @@ public class Fraction {
         return numerator > denominator;
     }
 
+    public Boolean isEquivalent(Fraction secondFraction){
+        return this.numerator * secondFraction.denominator == this.denominator * secondFraction.numerator;
+    }
+
+
 }
