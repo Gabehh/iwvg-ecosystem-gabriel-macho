@@ -51,4 +51,9 @@ public class DecimalCollection {
         return Collections.min(this.collection);
     }
 
+    public double product(){
+        this.validateIsNullOrEmpty();
+        return this.collection.stream().reduce((a, b) -> a * b).orElse(-1.0);
+    }
+
 }
