@@ -27,4 +27,21 @@ public class Fraction {
         return denominator;
     }
 
+    public Boolean isPropia(){
+        return numerator < denominator;
+    }
+    public Boolean isImpropia(){
+        return numerator > denominator;
+    }
+
+    public Boolean isEquivalent(Fraction secondFraction){
+        return this.numerator * secondFraction.denominator == this.denominator * secondFraction.numerator;
+    }
+
+    public Fraction product(Fraction secondFraction){
+        return new Fraction(this.numerator * secondFraction.numerator,this.denominator * secondFraction.denominator);
+    }
+
+
+
 }
