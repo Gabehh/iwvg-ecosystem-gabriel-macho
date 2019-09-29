@@ -24,13 +24,13 @@ public class UserTest {
 
     @Test
     void testFullName(){
-        assertEquals("Gabriel macho La familia macho", user.fullName());
+        assertEquals("Gabriel Macho La Familia Macho", user.fullName());
     }
 
     @Test
     void testFullNameName(){
         user = new User(2,"Enrique Macho", "La Familia Macho");
-        assertEquals("Enrique macho La familia macho", user.fullName());
+        assertEquals("Enrique Macho La Familia Macho", user.fullName());
     }
 
     @Test
@@ -44,13 +44,13 @@ public class UserTest {
 
     @Test
     void testFamilyName(){
-        assertEquals("La familia macho", user.getFamilyName());
+        assertEquals("La Familia Macho", user.getFamilyName());
     }
 
     @Test
     void testFamilyNameName(){
         user = new User(5,"Gabriel Macho", "Nueva Familia Macho");
-        assertEquals("Nueva familia macho", user.getFamilyName());
+        assertEquals("Nueva Familia Macho", user.getFamilyName());
     }
 
 }
