@@ -46,4 +46,14 @@ public class DecimalCollection {
         return Collections.max(this.collection);
     }
 
+    public double min() {
+        this.validateIsNullOrEmpty();
+        return Collections.min(this.collection);
+    }
+
+    public double product(){
+        this.validateIsNullOrEmpty();
+        return this.collection.stream().reduce((a, b) -> a * b).orElse(-1.0);
+    }
+
 }
