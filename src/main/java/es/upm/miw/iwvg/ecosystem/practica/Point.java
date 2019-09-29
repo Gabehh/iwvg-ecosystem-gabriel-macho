@@ -40,6 +40,14 @@ public class Point {
         return this.y;
     }
 
+    public void setX(int x) { this.x = x; }
+
+    public void setY(int y) { this.y = y; }
+
+    public double distanceBetweenPoints(Point secondPoint){
+        return Math.sqrt(Math.pow((double) secondPoint.x - this.x,2)+Math.pow((double) secondPoint.y - this.y,2));
+    }
+
     @Override
     public String toString() {
         return "Point{" +
