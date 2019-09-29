@@ -1,4 +1,6 @@
 package es.upm.miw.iwvg.ecosystem.practica;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class User {
 
@@ -10,8 +12,13 @@ public class User {
 
     public User(int number, String name, String familyName) {
         this.number = number;
-        this.name = this.format(name);
-        this.familyName = this.format(familyName);
+        this.name = this.newFormat(name);
+        this.familyName = this.newFormat(familyName);
+    }
+
+    private String newFormat(String string){
+        return  String.join(" ",Arrays.asList(string.split(" ")).stream().map(value -> value.trim().substring(0, 1)
+                .toUpperCase() + value.substring(1).toLowerCase()).collect(Collectors.toList()));
     }
 
     private String format(String string) {
@@ -31,7 +38,7 @@ public class User {
     }
 
     public String getName() {
-        return this.name;
+        return this.name.toUpperCase();
     }
 
     public String getFamilyName() {
