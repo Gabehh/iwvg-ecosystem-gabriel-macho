@@ -45,4 +45,25 @@ public class FractionTest {
     void testDenominator() {
         assertEquals(8, fraction.getDenominator());
     }
+
+    @Test
+    void testIsPropia(){
+        assertEquals(true,fraction.isPropia());
+    }
+    @Test
+    void testIsPropiaPropia(){
+        fraction = new Fraction(9,2);
+        assertEquals(false,fraction.isPropia());
+    }
+
+    @Test
+    void testIsImropia(){
+        fraction = new Fraction(9,5);
+        assertEquals(true,fraction.isImpropia());
+    }
+
+    @Test
+    void testIsImropiaImpropia(){
+        assertEquals(false,fraction.isImpropia());
+    }
 }

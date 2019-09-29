@@ -27,4 +27,11 @@ public class Fraction {
         return denominator;
     }
 
+    public Boolean isPropia(){
+        return numerator < denominator;
+    }
+    public Boolean isImpropia(){
+        return numerator > denominator;
+    }
+
 }
