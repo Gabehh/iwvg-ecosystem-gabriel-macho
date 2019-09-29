@@ -38,10 +38,4 @@ public class Fraction {
         return this.numerator * secondFraction.denominator == this.denominator * secondFraction.numerator;
     }
 
-    public Fraction product(Fraction secondFraction){
-        return new Fraction(this.numerator * secondFraction.numerator,this.denominator * secondFraction.denominator);
-    }
-
-
-
 }
